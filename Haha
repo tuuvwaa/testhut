@@ -3,7 +3,7 @@ local Library = loadstring(game:HttpGetAsync("https://github.com/ActualMasterOog
 -- Âm thanh khởi động
 local startupSound = Instance.new("Sound")
 startupSound.SoundId = "rbxassetid://8594342648"
-startupSound.Volume = 1000 -- Điều chỉnh âm lượng nếu cần
+startupSound.Volume = 500 -- Điều chỉnh âm lượng nếu cần
 startupSound.Looped = false -- Không lặp lại âm thanh
 startupSound.Parent = game.CoreGui-- Đặt parent vào CoreGui để đảm bảo âm thanh phát
 startupSound:Play() -- Phát âm thanh khi script chạy
@@ -259,6 +259,13 @@ getgenv().EspFruit = true
 getgenv().Team = "Pirate"
 getgenv().WebhookUrl = ''
 loadstring(game:HttpGet('https://raw.githubusercontent.com/VNT-UNIVERSAL/Panda-Hub/main/Release/fruitfarm.lua'))()
+    end
+})
+FruitTab:AddButton({
+    Title = "Sera Hub",
+    Description = "Auto Nhặt Fruit",
+    Callback = function()
+        loadstring(game:HttpGet("https://serahub.site/scripts/farmfruit.txt"))()
     end
 })
 PlayerTab:AddButton({
